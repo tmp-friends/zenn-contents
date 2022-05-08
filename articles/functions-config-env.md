@@ -1,9 +1,9 @@
 ---
-title: "FirebaseCloudFunctionsで環境変数を設定する"
+title: "CloudFunctions for Firebaseで環境変数を設定する"
 emoji: "🐕"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Firebase", "Cloud Functions"]
-published: false
+topics: ["Firebase", "CloudFunctions"]
+published: true
 ---
 
 FirebaseCloudFunctionsで環境変数を設定するにあたり、以下の2通りの手段が提供されています。
@@ -12,7 +12,7 @@ FirebaseCloudFunctionsで環境変数を設定するにあたり、以下の2通
 
 ## .envファイルで設定する
 
-functions/ 配下に`.env`ファイルを作成し、キーを追加するだけでできます。
+functions/ 配下に`.env`ファイルを作成し、キーを追加するだけでできます
 
 https://firebase.google.com/docs/functions/config-env?hl=ja#env-variables
 
@@ -24,15 +24,15 @@ https://firebase.google.com/docs/functions/config-env?hl=ja#env-variables
 
 ## CLIで設定する
 
-こちらの方法は実際に使用していないので自分用のメモです。
+こちらの方法は実際に使用していないので自分用のメモです
 
-set
+**set**
 
 ```sh
 $ firebase functions:config:set twitter.app_key="YOUR_APP_KEY"
 ```
 
-get
+**get**
 
 ```sh
 $ firebase functions:config:get
@@ -45,8 +45,8 @@ $ firebase functions:config:get
 
 ## おわりに
 
-CloudFunctionsなら簡単に環境変数を設定できることがわかりました。
-CloudFunctions以外で環境変数を設定する場合は、dotenvなどを使用するといいかなと思います。
+- CloudFunctionsなら簡単に環境変数を設定できることがわかりました
+- CloudFunctions以外で環境変数を設定する場合は、dotenvなどを使用するといいかなと思います
 
 ## 参考
 * https://firebase.google.com/docs/functions/config-env?hl=ja#env-variables

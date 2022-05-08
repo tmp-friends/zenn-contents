@@ -248,5 +248,5 @@ Next.jsでの基本的な環境構築はできたかなと思います。
 - ESLint&Prettier
   - https://qiita.com/soarflat/items/06377f3b96964964a65d
   - https://yumegori.com/vscode_react_typescript_eslint_prettier
-- Prettierの項目一覧
-  - https://www.mitomex.blog/prettier-options/
+  - Prettierの項目一覧
+    - https://www.mitomex.blog/prettier-options/

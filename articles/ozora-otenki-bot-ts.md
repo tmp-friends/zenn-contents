@@ -3,7 +3,7 @@ title: "TypeScript×FirebaseでTwitterBotを制作した"
 emoji: "🤖"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["TypeScript", "Firebase", "Twitter"]
-published: false
+published: true
 ---
 
 ## 制作物
@@ -87,6 +87,7 @@ ex)
 ### Firebaseでローカル実行環境を整える
 * Pub/Sub
 * Firebase Cloud Functions
+
 上記を同時にFirebase Emulatorsでローカル実行する方法が少し複雑でした。
 
 #### 準備

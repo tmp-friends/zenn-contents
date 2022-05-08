@@ -2,7 +2,7 @@
 title: "Twitter-API-v2ライブラリでTwitter検索してみる"
 emoji: "😆"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Node.js", "TypeScript", "Twitter", "Firebase", "Cloud Functions"]
+topics: ["Node.js", "TypeScript", "Twitter", "Firebase", "CloudFunctions"]
 published: true
 ---
 
