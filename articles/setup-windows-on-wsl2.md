@@ -6,6 +6,17 @@ topics: [Windows, WSL2, Linux]
 published: true
 ---
 
+## はじめに
+
+WSL2を用いてWindows上でLinux環境を使えるようにしました
+
+また、追加で
+
+- NeoVim
+- Docker
+
+も設定しました
+
 ## WSL2
 
 ### 概要
@@ -120,9 +131,9 @@ https://www.aise.ics.saitama-u.ac.jp/~gotoh/DockerOnWindowsWithWSL2.html
 
 https://qiita.com/amenoyoya/items/8992fc1659e07b4bb7d6
 
-## まとめ
+## おわりに
 
-- WSL2を使えば簡単にWindowsでLinux環境が作れる
-- 環境がLinuxだと開発する上でなにかと楽だし、Linuxの勉強にもなるのでいいかもしれない
+- WSL2を使えば簡単にWindowsでLinux環境が作れました
+- 環境がLinuxだと開発する上でなにかと楽だし、Linuxの勉強にもなるのでいいかもしれません
 
 
