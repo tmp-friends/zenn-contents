@@ -3,7 +3,7 @@ title: "Linux環境でDockerコンテナ内にuserで入る"
 emoji: "👀"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Linux, Docker]
-published: false
+published: true
 ---
 
 ## 問題点
@@ -15,7 +15,7 @@ published: false
 nest g controller <ファイル名>
 ```
 
-- （user権限で使用している）Vimなどでのエディタで編集しようとしてもファイルがreadonlyとなってしまうため、編集できなくなるという問題に直面しました。
+- （user権限で使用している）Vimなどでのエディタで編集しようとしてもファイルがreadonlyとなってしまうため、編集できなくなるという問題に直面
 
 ## 解決策
 
