@@ -23,7 +23,7 @@ Dockerコンテナにuser権限で入るようにすることで解決
 `-u`オプションでユーザを指定できる
 
 ```sh
-docker exec -u (id -u $USER):(id -g $USER) -it <コンテナ名> /bin/sh
+docker exec -u $(id -u $USER):$(id -g $USER) -it <コンテナ名> /bin/sh
 ```
 
 指定するユーザについてはLinux上で`id`コマンドを実行することで確認できる
