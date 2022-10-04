@@ -3,7 +3,7 @@ title: "NestJSでのCORSエラーを解消する"
 emoji: "🦁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ['NestJS', 'TypeScript', 'Web', 'http', 'Security']
-published: false
+published: true
 ---
 
 開発時にNext.jsからNestJSへデータfetchするとCORSエラーが起きました
