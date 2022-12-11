@@ -52,7 +52,7 @@ pick 05dc5b2 third commit
 - `f(fixup)`: コミットをひとつ前のものにまとめる
 - コミットの順番を変える(conflictしないようであれば)
 
-#### 例) `third commit`を`first commit`に含めたいとき
+#### ex. `third commit`を`first commit`に含めたいとき
 
 以下のようにするだけでできます
 
