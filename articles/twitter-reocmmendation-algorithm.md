@@ -1,9 +1,9 @@
 ---
-title: "Twitter Recommendation Algorithm"
+title: "Twitter Recommendation Algorithmについて"
 emoji: "🐦"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["機械学習", "github"]
-published: false
+published: true
 ---
 
 ## はじめに
@@ -33,58 +33,59 @@ https://blog.twitter.com/engineering/en_us/topics/open-source/2023/twitter-recom
 
 ### 補足) Multi-stageレコメンドシステム
 
-ステージを複数用意し、効率的にレコメンドするアイテムを絞っていくシステムの構成
+ステージを複数用意し、効率的にレコメンドするアイテムを絞っていくシステムの構成のこと
 
 以下のRecsys2022のスライド資料などがわかりやすいです
 
 https://librerank-community.github.io/slides-recsys22-tutorial-neuralreranking.pdf
 
-## Candidate Sources
+## 1. Candidate Sources
 
-- 概要
-  - この層ではアイテムを大雑把に絞ることが目的なので、精度よりスピードが求められる
-  - 具体的には、数億あるアイテムの中から1500までに絞るそう
-  - ScalaとたまにPython
+### 概要
 
-
-- データ
+- この層ではアイテムを大雑把に絞ることが目的なので、精度よりスピードが求められる
+- 具体的には、数億あるアイテムの中から1500までに絞るそう
+- ScalaとたまにPython
+- In-Network-SourcesとOut-of-Network-Sourcesから50%ずつレコメンドする
   - In-Network-Sources: フォローしているユーザ
   - Out-of-Network-Sources: フォローしていないユーザ
 
-In-Network-SourcesとOut-of-Network-Sourcesを1:1でレコメンドする
+### Candidate Sourcesでのモデル
+- In-Network-Sources
+  - Real Graph
+    - https://github.com/twitter/the-algorithm/tree/main/src/scala/com/twitter/interaction_graph
+    - ユーザ間のエンゲージメントの可能性を予測するモデル
+- Out-of-Network-Sources
+  - GraphJet
+    - https://github.com/twitter/GraphJet
+    - フォローしていないのに、あるツイートが自分に関連するかどうかを判断するのが難しい -> 2つのアプローチをとっている
+      1. 自分がフォローしている人達がどんなツイートをしたか
+      2. 自分と似たような'いいね'をしている人たちは他にどんなツイートに'いいね'しているか
+  - SimClusters
+    - https://github.com/twitter/the-algorithm/tree/main/src/scala/com/twitter/simclusters_v2
+    - 任意の2人のユーザ、ツイート、ユーザとツイートのペア間の類似度を計算しEmbeddingを得る
+    - 行列分解手法であるMatrix Factrizationをカスタムしたものを使っているそう
+    - 得られたEmbeddingを利用して影響力のあるユーザを中心にコミュニティを形成し、その数は145kもあるとのこと
 
-- Candidate Sourcesでの代表的なシステム
-  - In-Network-Sources
-    - Real Graph
-      - ユーザ間のエンゲージメントの可能性を予測するモデル
-      - https://github.com/twitter/the-algorithm/tree/main/src/scala/com/twitter/interaction_graph
-  - Out-of-Network-Sources
-    - GraphJet
-      - フォローしていないのに、あるツイートが自分に関連するかどうかを判断するのが難しい
-      - -> 2つのアプローチをとっている
-        1. 自分がフォローしている人達がどんなツイートをしたか
-        2. 自分と似たような'いいね'をしている人たちは他にどんなツイートに'いいね'しているか
-    - SimClusters
 
+![/images/twitter-recommendation-algorithm/simclusters.png.img.fullhd.medium.png](/images/twitter-recommendation-algorithm/simclusters.png.img.fullhd.medium.png)
 
-## Ranking
+## 2. Ranking
 
+### 概要
+
+- この層では1500件に絞られたツイートをランク付けする
+- モデルの精度が大事になってくる
+- 48Mのニューラルネットワークが継続的に'いいね', RT, Replyから学習を行っている
+
+### Rankingでのモデル
 - LIGHT RANKER
+  - https://github.com/twitter/the-algorithm/tree/main/src/python/twitter/deepbird/projects/timelines/scripts/models/earlybird
+  - ※ READMEを読むと現在リプレイス中とのことなのでスキップ
 - HEAVY RANKER
-    - [https://github.com/twitter/the-algorithm-ml/tree/main/projects/home/recap](https://github.com/twitter/the-algorithm-ml/tree/main/projects/home/recap)
-
-### 補足) torchrecとは
-
-[https://pytorch.org/torchrec/index.html](https://pytorch.org/torchrec/index.html)
-
-PyTorchが提供する大規模なDeepLearningレコメンドシステムを構築する際に必要な機能を提供するライブラリ
-
-具体的に以下のことが簡単にできるようになる
-
-- multi-device
-- multi-node
-- data-parallelism
-- model-parallelism
+  - https://github.com/twitter/the-algorithm-ml/tree/main/projects/home/recap
+  - Python(torchrec)
+  - 下記に詳しく記載
 
 ### HEAVY RANKER
 
@@ -108,6 +109,29 @@ https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/FEATUR
         - [https://github.com/xue-pai/FuxiCTR](https://github.com/xue-pai/FuxiCTR)
     - TwitterでのMaskNetの実装部分
         - https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/model/mask_net.py
+
+#### 補足) torchrecとは
+
+https://pytorch.org/torchrec/index.html
+
+PyTorchが提供する大規模なDeepLearningレコメンドシステムを構築する際に必要な機能を提供するライブラリ
+
+具体的に以下のことが簡単にできるようになる
+
+- multi-device
+- multi-node
+- data-parallelism
+- model-parallelism
+
+## 3. Heuristics,Filters,and ProductFeatures(=フィルタリング)
+
+- Visibility Filtering: ブロックやミュート中のアカウントのツイートを含めない
+- Author Diversity: レコメンドするツイートのアカウントにバリエーションをもたせる
+- Content Balance: In-Network-Sources, Out-of-Network-Sourcesでバランスをとる
+- Feedback-based Fatigue: ネガティブなフィードバックがあった場合に特定のツイートのスコアを下げる
+- Social Proof: 2次的なつながりのないツイートを除外。フォローしている誰かが、そのツイートに関与するorフォローしているアカウント
+- Conversations: 会話をスレッドとして出す
+- Edited Tweets: 編集済みのツイートなら更新
 
 ## おわりに
 
