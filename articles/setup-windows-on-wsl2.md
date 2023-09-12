@@ -1,6 +1,6 @@
 ---
 title: "Windows + WSL2でUbuntuの開発環境構築"
-emoji: "🏖️"
+emoji: "️🐧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Windows, WSL2, Linux]
 published: true

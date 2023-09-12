@@ -1,6 +1,6 @@
 ---
 title: "VSCode RemoteContainerを導入する"
-emoji: "🐡"
+emoji: "🏖️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Docker", "VS Code"]
 published: true

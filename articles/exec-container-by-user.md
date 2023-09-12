@@ -1,6 +1,6 @@
 ---
 title: "Linux環境でDockerコンテナ内にuserで入る"
-emoji: "👀"
+emoji: "🐧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Linux, Docker]
 published: true

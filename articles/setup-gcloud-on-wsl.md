@@ -1,6 +1,6 @@
 ---
 title: "WSL2でgcloud CLIをインストールする"
-emoji: "🍣"
+emoji: "🐧"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["GCP", "WSL2"]
 published: true
