@@ -2,7 +2,7 @@
 title: "DockerでNext.jsの環境構築をする"
 emoji: "👍"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Next.js", "TypeScript", "Docker", "ESLint", "Prettier"]
+topics: ["nextjs", "typescript", "docker", "eslint", "prettier"]
 published: true
 ---
 
@@ -52,6 +52,8 @@ services:
     tty: true
     volumes:
       - ./src:/app
+    ports:
+      - "3000:3000"
     command: sh -c "npm run dev"
 ```
 
@@ -83,6 +85,8 @@ services:
     tty: true
     volumes:
       - ./src:/app
+    ports:
+      - "3000:3000"
 +   environment:
 +     - WATCHPACK_POLLING=true
     command: sh -c "npm run dev"
