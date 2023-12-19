@@ -3,7 +3,7 @@ title: "SageMakerにおけるカスタムコンテナと推し構成"
 emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["aws", "sagemaker", "機械学習"]
-published: false
+published: true
 ---
 
 この記事は[MLOps Advent Calendar 2023](https://qiita.com/advent-calendar/2023/mlops)の19日目の記事です。
