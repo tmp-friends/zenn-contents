@@ -1,5 +1,5 @@
 ---
-title: "[論文メモ] LFRR"
+title: "[論文メモ] 相互推薦における協調フィルタリング(LFRR)"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["機械学習"]
