@@ -3,7 +3,7 @@ title: "BigQueryStorageAPIで高速にデータを取得する"
 emoji: "🔍"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["gcp", "bigquery"]
-published: false
+published: true
 publication_name: "dmmdata"
 ---
 
