@@ -1,6 +1,6 @@
 ---
 title: "CloudFunctions for Firebaseで環境変数を設定する"
-emoji: "🐕"
+emoji: "🛠️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Firebase", "CloudFunctions"]
 published: true

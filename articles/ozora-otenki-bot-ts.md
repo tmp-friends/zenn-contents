@@ -1,6 +1,6 @@
 ---
-title: "TypeScript×FirebaseでTwitterBotを制作した"
-emoji: "🤖"
+title: "TypeScript×Firebaseで天気予報をつぶやくTwitterBotを制作した"
+emoji: "⛅️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["TypeScript", "Firebase", "Twitter"]
 published: true

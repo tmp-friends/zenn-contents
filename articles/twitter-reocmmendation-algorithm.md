@@ -1,6 +1,6 @@
 ---
 title: "Twitter Recommendation Algorithmについて"
-emoji: "🐦"
+emoji: "🕊️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["機械学習", "github"]
 published: true
@@ -138,5 +138,3 @@ PyTorchが提供する大規模なDeepLearningレコメンドシステムを構�
 - 情報量が多すぎてRanking部分しかろくに見れていないですが、他も見ていきたいです
 - torchrecの存在は知っていたのですが、ネット上に情報がなさすぎたので、Twitterで使われていて驚きました
 - Twitterレベルの大規模なシステムのレコメンドの実装が見られるのは貴重ですし、面白いので是非ご覧になってみてください
-
-

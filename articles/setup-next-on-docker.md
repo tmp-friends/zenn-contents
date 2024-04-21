@@ -1,6 +1,6 @@
 ---
 title: "DockerでNext.jsの環境構築をする"
-emoji: "👍"
+emoji: "🛠️️"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nextjs", "typescript", "docker", "eslint", "prettier"]
 published: true
