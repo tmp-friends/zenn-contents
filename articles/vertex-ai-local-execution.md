@@ -3,7 +3,7 @@ title: "Vertex AI Pipelinesにおけるローカル実行"
 emoji: "🧪"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["gcp", "vertexai", "docker", "nvidia"]
-published: false
+published: true
 publication_name: "dmmdata"
 ---
 
