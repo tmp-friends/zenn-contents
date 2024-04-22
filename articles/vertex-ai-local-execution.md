@@ -42,7 +42,7 @@ gcloud ai custom-jobs local-run \
   --model_path "gs://bucket_name/dir_name/2024-04-19/.../model_path" \
   --dt "2024-04-19" \
   --env "dev" \
-  --epoch 10
+  --epochs 10
 ```
 
 ```:出力例
@@ -159,7 +159,7 @@ Pipeline単位での実行も可能
 
 ### GPUを用いた実行について
 
-- Kubeflow PipelinesのLocalRunnerは、ローカルのGPGPUソフトウェア(NVIDIA CUDA Toolkit, cuDNN)に対して依存がありそう
+- Kubeflow PipelinesのLocalRunnerは、ローカルのGPUソフトウェア(NVIDIA CUDA Toolkit, cuDNN)に対して依存がありそう
   - GPUを用いた処理をローカル実行した際に、`error code CUDA driver version is insufficient for CUDA runtime version`というエラーが出たため
 
 ```py
@@ -201,7 +201,7 @@ Traceback (most recent call last):
 RuntimeError: Task 'gpu-processing' finished with status FAILURE
 ```
 
-- 一方で、`gcloud ai custom-jobs local-run`での実行はDocker内で閉じているので、GPGPUソフトウェア(NVIDIA CUDA Toolkit, cuDNN)が不要だったり、ローカル環境を汚さずに済みそう
+- 一方で、`gcloud ai custom-jobs local-run`での実行はDocker内で閉じているのでGPUソフトウェアが不要だったり、ローカル環境を汚さずに済みそう
   - NVIDIA Container Toolkitを用いて実行しているため(?)
 
 
@@ -212,7 +212,7 @@ RuntimeError: Task 'gpu-processing' finished with status FAILURE
 ## おわりに
 
 - Vertex AI Pipelinesには、楽にローカル実行できる機能が揃っていた
-- GPGPUソフトウェアに対する依存を持ちたくないので、今後は`gcloud ai custom-jobs local-run`を使う方向でいきたい
+- GPUソフトウェアに対する依存を持ちたくないので、今後は`gcloud ai custom-jobs local-run`を使う方向でいきたい
 - ここら辺のローカル実行まわりの文献がネット上にあまりなかったので、記事にすることができてよかった
 
 ## 参考
