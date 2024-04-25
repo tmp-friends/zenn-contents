@@ -99,7 +99,7 @@ https://twitter.com/temple_c_tech/status/1777488184903086260
 
 [8th](https://www.kaggle.com/competitions/hms-harmful-brain-activity-classification/discussion/492482)
 
-- ラベルが10未満のものに対して、PseudoLabeling
+- Labelのついている数が10未満のものに対して、PseudoLabeling
 
 #### Ensemble
 
