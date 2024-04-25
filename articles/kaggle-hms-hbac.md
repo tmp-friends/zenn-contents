@@ -3,7 +3,7 @@ title: "Kaggle-HMSコンペ 上位解法まとめ(+参加振り返り)"
 emoji: "🦆"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["kaggle"]
-published: false
+published: true
 publication_name: "dmmdata"
 ---
 
@@ -120,7 +120,7 @@ https://twitter.com/temple_c_tech/status/1777488184903086260
 
 ### その他
 
-- [3rd](https://www.kaggle.com/competitions/hms-harmful-brain-activity-classification/discussion/492471)のCVの作り方がよく練られていた
+- [3rd](https://www.kaggle.com/competitions/hms-harmful-brain-activity-classification/discussion/492471)のCVの切り方がよく練られていた
 
 ## 参加してみての振り返り
 
@@ -149,7 +149,7 @@ https://twitter.com/temple_c_tech/status/1777488184903086260
 
 ## おわりに
 
-- 上位解法を何個か読んだが、全然ピンとこなかった...
+- 上位解法を何個か読んだが、モデルへの入力周りは全然ピンとこなかった...
 - 継続して取り組めば、メダルくらいは取れることがわかったのが一番の収穫だった
 - PrivateLB公開時に普段の生活からは考えられないくらいの脳汁が出るので、今後もやっていきたいと思う
 
