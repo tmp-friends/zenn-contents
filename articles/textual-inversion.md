@@ -1,9 +1,9 @@
 ---
-title: "[論文メモ] 画像生成AIのパーソナライズ? Textual Inversion"
+title: "[論文メモ] 画像生成AIのパーソナライズ？ Textual Inversion"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ai", "機械学習", "stablediffusion"]
-published: false
+published: true
 ---
 
 ## An Image is Worth One Word: Personalizing Text-to-Image Generation using Textual Inversion
@@ -78,7 +78,7 @@ $$
 
 ### 次に読むべき論文
 
-- Clip
+- CLIP
 - Unet
 - DiffusionModel
     - LDMs: https://openaccess.thecvf.com/content/CVPR2022/html/Rombach_High-Resolution_Image_Synthesis_With_Latent_Diffusion_Models_CVPR_2022_paper.html
