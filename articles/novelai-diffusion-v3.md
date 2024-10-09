@@ -3,7 +3,7 @@ title: "[論文メモ] NovelAI Diffusion V3 技術レポート"
 emoji: "📝"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ai", "機械学習", "stablediffusion"]
-published: false
+published: true
 ---
 
 ## Improvements to SDXL in NovelAI Diffusion V3
