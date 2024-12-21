@@ -3,10 +3,11 @@ title: "Stable Diffusion による image-to-painting"
 emoji: "🎨"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["ai", "機械学習", "stablediffusion"]
-published: false
+published: true
 ---
 
 ## はじめに
+
 この記事は、[生成AI Advent Calendar 2024](https://adventar.org/calendars/9940) の20日目の記事です。
 
 
@@ -57,9 +58,8 @@ loss も `pixel loss` と `stroke loss` の2つをとるようにしていたり
 - ProcessPainter
 - Paints-UNDO
 
-### ProcessPainter
+### ProcessPainter[^3]
 
-- 論文: https://arxiv.org/abs/2406.06062
 - 会議: CVPR2024
 - code: https://github.com/nicolaus-huang/ProcessPainter
 
@@ -75,8 +75,8 @@ loss も `pixel loss` と `stroke loss` の2つをとるようにしていたり
 
 #### 背景
 
-- Stroke-Based Rendering (=SBR) 手法は画像をブラシストロークの系列に分解するが、基本的なブラシストロークに限定されるので、描画プロセスを再現するには不十分
-- 拡散プロセスを利用した Text-to-image モデルはノイズ除去を通して画像生成しており、これも実際の描画プロセスからは大きく乖離している
+- SBR 手法は画像をブラシストロークの系列に分解するが、基本的なブラシストロークに限定されるので、描画プロセスを再現するには不十分
+- 拡散プロセスを利用した text-to-image モデルはノイズ除去を通して画像生成しており、これも実際の描画プロセスからは大きく乖離している
 
 #### 提案手法
 
@@ -161,5 +161,6 @@ Paints-UNDO から追えてないので、最近ではもっと進化してい�
 
 - SBR 手法についてのサーベイ (?) 論文: https://arxiv.org/abs/2302.00595
 
-[^1]: openaccess.thecvf.com
+[^1]: https://openaccess.thecvf.com/content/CVPR2021/papers/Zou_Stylized_Neural_Painting_CVPR_2021_paper.pdf
 [^2]: https://arxiv.org/abs/2108.03798
+[^3]: https://arxiv.org/abs/2406.06062
